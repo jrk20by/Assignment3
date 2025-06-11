@@ -50,15 +50,14 @@ Code by Josh Knorr
       let imgUrl = '';
 
       if (hour >= 6 && hour < 12) {
-        color = "#FFFAE5"; // Morning (6am–12pm): Color 1, light yellow
+        color = "#FFFAE5"; // Morning (6am–12pm): Image 1
+        imgUrl = 'https://cdn.pixabay.com/photo/2015/01/07/15/51/woman-591576_1280.jpg';
       } else if (hour >= 12 && hour < 18) {
-        color = "#E5F4FF"; // Afternoon (12pm–6pm): Color 2, light blue
-      } else if (hour >= 18 && hour < 21) {
-        color = "#FFDAB9"; // Evening (6pm–9pm): Color 3, peach
-        imgUrl = 'https://cdn.pixabay.com/photo/2022/03/24/15/46/woman-7089304_1280.jpg';
+        color = "#E5F4FF"; // Afternoon (12pm–6pm): Image 2
+        imgUrl = 'https://cdn.pixabay.com/photo/2025/06/02/04/18/snapshot-9636165_1280.jpg';
       } else {
-        color = "#2C3E50"; // Night (9pm–6am): Color 4, dark blue
-        imgUrl = 'https://cdn.pixabay.com/photo/2024/08/25/02/16/sunflower-8995443_1280.jpg';
+        color = "#2C3E50"; // Evening and Night (6pm–6am): Image 3
+        imgUrl = 'https://cdn.pixabay.com/photo/2020/01/31/07/10/city-4807268_1280.jpg';
       }
       //sets background color of entire page to color variable
       document.body.style.backgroundColor = color;

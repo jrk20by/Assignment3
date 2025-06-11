@@ -35,13 +35,13 @@ Code by Josh Knorr
   <h2 id="time"></h2>
   <br>
   <p>Image changes at 06:00, 12:00 and 18:00</p>
-
+  <!--image tag with variable source to display dynamic image-->
   <img id="timeImage" src="" alt="Time of Day Image" />
 
   <script>
-    //definition of function to change background color depending on time of day
+    //definition of function to change background image depending on time of day
     //function uses if statements to check hour of system clock and assign appropriat color
-    function changeBackgroundColor() {
+    function changeBackgroundImage() {
       //declaration of hour variable, assigned a new date object
       const hour = new Date().getHours();
       //declaration of color variable, to be assigned by if statements below
@@ -61,6 +61,7 @@ Code by Josh Knorr
       }
       //sets background color of entire page to color variable
       document.body.style.backgroundColor = color;
+      //sets image source to url within a given conditional if conditions return true based on system time
       img.src = imgUrl;
     }
     //definition of function to get current time
@@ -73,10 +74,10 @@ Code by Josh Knorr
     }
 
   
-    //definition of function to update background color and clock if user stays on page
+    //definition of function to update background image and clock if user stays on page
     function updatePage() {
       document.getElementById("time").textContent = getCurrentTime();
-      changeBackgroundColor();
+      changeBackgroundImage();
     }
 
     // Initial call to show clock and background color immediately 
